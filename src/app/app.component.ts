@@ -1,13 +1,19 @@
-import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { Component, OnInit } from '@angular/core';
+import { USERS } from './users/users-data';
+import { User } from './users/user';
 
 @Component({
   selector: 'app-root',
-  standalone: true,
-  imports: [RouterOutlet],
+  standalone: false,
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = 'ng-course';
+  onSelectUser(user: User) {
+    console.log('On select user from app : ' + user);
+    this.selectedUser = user;
+  }
+  selectedUser!: User;
+  users: User[] = USERS;
+  title = 'Angular world!';
 }
