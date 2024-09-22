@@ -1,9 +1,9 @@
 export interface Task {
-    id: string,
-    userId: string,
-    title: string,
-    summary: string,
-    dueDate: string,
+    id: string | undefined,
+    userId: string | undefined,
+    title: string | undefined,
+    summary: string | undefined,
+    dueDate: string | undefined,
 }
 export const DUMMY_TASKS = [
     {

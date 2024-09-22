@@ -3,6 +3,7 @@
   <ul id="users">
     <li *ngFor="let user of users; index as i">
       <app-users
+        [isSelected]="user.id == selectedUser?.id"
         [userId]="user.id"
         [imgPath]="user.avatar"
         [userName]="user.name"
@@ -10,5 +11,7 @@
       />
     </li>
   </ul>
-  <app-tasks [userData]="selectedUser"></app-tasks>
+  <app-tasks [newTask]="newTask" (displayAddTaskDiv)="showAddTaskDiv = true" [userData]="selectedUser"></app-tasks>
+
+  <app-add-task (newTask)="addNewTask($event);showAddTaskDiv = false" [selectedUser]="selectedUser" (cancleDialog)="showAddTaskDiv = false" *ngIf="showAddTaskDiv"></app-add-task>
 </main>

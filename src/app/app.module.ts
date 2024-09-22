@@ -9,7 +9,7 @@ import { HeaderComponent } from "./header/header.component"
 import { UsersComponent } from "./users/users.component"
 import { TasksComponent } from "./tasks/tasks.component"
 import { TaskComponent } from "./task/task.component";
-
+import { AddTaskComponent } from "./add-task/add-task.component"
 
 @NgModule({
   declarations: [
@@ -26,7 +26,8 @@ import { TaskComponent } from "./task/task.component";
     FormsModule,
     ReactiveFormsModule,
     CommonModule,
-    RouterOutlet
+    RouterOutlet,
+    AddTaskComponent
   ],
   providers: [],
   bootstrap: [AppComponent]

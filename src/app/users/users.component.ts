@@ -12,6 +12,8 @@ export class UsersComponent {
   imgPath = input.required<string>();
   @Input({required : true}) userName : string = '';
 
+  @Input({required:true}) isSelected! : boolean;
+
   @Output() selectedUser = new EventEmitter();
 
   alertMe(){

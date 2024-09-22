@@ -1,5 +1,5 @@
 <div>
-    <button (click)="alertMe()">
+    <button [class.active]="isSelected" (click)="alertMe()">
         <img [src]="fullImgPath()" />
         <span>Name : {{userName}}</span>
     </button>
